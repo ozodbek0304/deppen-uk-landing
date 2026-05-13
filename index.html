@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepen — Studio Management for UK Gyms & Studios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <nav id="nav">
+        <a href="#" class="nav-logo">deepen</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#app">Mobile App</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#demo" class="nav-cta">Book a Demo</a></li>
+        </ul>
+        <button class="nav-mob" onclick="toggleNav()" aria-label="Menu">☰</button>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-orb-1"></div>
+        <div class="hero-orb-2"></div>
+        <div class="hero-badge"><span class="hero-badge-dot"></span>🇬🇧 Now live in the UK</div>
+        <h1>Stop managing<br>your studio.<br>Start <span class="grad">running it.</span></h1>
+        <p class="hero-sub">Bookings, payments, memberships and your branded client app — all in one intelligent
+            platform.</p>
+        <div class="hero-actions">
+            <a href="#demo" class="btn-primary">Book a Demo — First Month Free ↗</a>
+            <a href="#features" class="btn-ghost">See how it works →</a>
+        </div>
+        <p class="hero-trial">No contracts · No setup fees · Cancel anytime</p>
+        <div class="hero-cards">
+            <div class="hero-stat-card">
+                <div class="stat-num">180+</div>
+                <div class="stat-label">Studios globally</div>
+            </div>
+            <div class="hero-stat-card">
+                <div class="stat-num">30+</div>
+                <div class="stat-label">International partners</div>
+            </div>
+            <div class="hero-stat-card">
+                <div class="stat-num">12</div>
+                <div class="stat-label">Days to go live</div>
+            </div>
+            <div class="hero-stat-card">
+                <div class="stat-num">1×</div>
+                <div class="stat-label">Dedicated account manager</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust">
+        <div class="trust-inner">
+            <span class="trust-label">Built for</span>
+            <div class="trust-chips">
+                <span class="trust-chip">🏋️ Gyms</span>
+                <span class="trust-chip">🧘 Yoga Studios</span>
+                <span class="trust-chip">🤸 Pilates</span>
+                <span class="trust-chip">🎾 Tennis Clubs</span>
+                <span class="trust-chip">🏓 Padel Courts</span>
+                <span class="trust-chip">🥊 Martial Arts</span>
+                <span class="trust-chip">💃 Dance Studios</span>
+                <span class="trust-chip">🏊 Swimming Pools</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="pain">
+        <div class="container">
+            <div class="section-label">Sound familiar?</div>
+            <h2 class="section-title">You didn't open a studio<br>to live in a spreadsheet.</h2>
+            <div class="pain-grid reveal">
+                <ul class="pain-list">
+                    <li class="pain-item">
+                        <div class="pain-icon">📱</div>
+                        <div class="pain-text"><strong>Managing bookings on WhatsApp</strong>Members texting you at all
+                            hours to book, cancel, or swap classes.</div>
+                    </li>
+                    <li class="pain-item">
+                        <div class="pain-icon">💸</div>
+                        <div class="pain-text"><strong>Chasing membership payments</strong>Awkward reminders, missed
+                            renewals, and revenue you never collect.</div>
+                    </li>
+                    <li class="pain-item">
+                        <div class="pain-icon">📋</div>
+                        <div class="pain-text"><strong>Juggling disconnected tools</strong>One app for scheduling,
+                            another for payments, another for staff — none talking to each other.</div>
+                    </li>
+                    <li class="pain-item">
+                        <div class="pain-icon">⏰</div>
+                        <div class="pain-text"><strong>Losing hours every week to admin</strong>Time you should spend on
+                            your members, your classes, your business.</div>
+                    </li>
+                </ul>
+                <div class="pain-relief">
+                    <div class="pain-relief-title">Deepen fixes all of this — in one platform.</div>
+                    <ul class="relief-list">
+                        <li class="relief-item">
+                            <div class="relief-check">✓</div>Clients book, pay and manage memberships themselves
+                        </li>
+                        <li class="relief-item">
+                            <div class="relief-check">✓</div>Payments collected automatically — no chasing
+                        </li>
+                        <li class="relief-item">
+                            <div class="relief-check">✓</div>Your whole studio managed from one dashboard
+                        </li>
+                        <li class="relief-item">
+                            <div class="relief-check">✓</div>Your own branded app on App Store & Google Play
+                        </li>
+                        <li class="relief-item">
+                            <div class="relief-check">✓</div>A real account manager — not a chatbot
+                        </li>
+                        <li class="relief-item">
+                            <div class="relief-check">✓</div>Up and running in under 2 weeks
+                        </li>
+                    </ul>
+                    <a href="#demo" class="btn-primary" style="margin-top:32px;display:inline-flex">Book a Free Demo
+                        ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <div class="section-label">Everything you need</div>
+            <h2 class="section-title">One platform.<br>Every tool your studio needs.</h2>
+            <div class="features-grid reveal">
+                <div class="feat-card">
+                    <div class="feat-icon">📅</div>
+                    <div class="feat-title">Bookings & Scheduling</div>
+                    <div class="feat-desc">Online class bookings, court reservations, and session management. Clients
+                        book from their phone — you see everything in real time.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">💳</div>
+                    <div class="feat-title">Automated Payments</div>
+                    <div class="feat-desc">Memberships renew automatically. One-off payments processed instantly. No
+                        more awkward money conversations or missed renewals.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">👥</div>
+                    <div class="feat-title">Member Management</div>
+                    <div class="feat-desc">Full member profiles, visit history, membership status, and communication —
+                        all in one place.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">🏷️</div>
+                    <div class="feat-title">Staff & Trainer Tools</div>
+                    <div class="feat-desc">Manage rotas, track trainer hours, calculate payouts, and control access
+                        permissions per role.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">📊</div>
+                    <div class="feat-title">Analytics Dashboard</div>
+                    <div class="feat-desc">Revenue, attendance, membership churn, and class performance — all the
+                        numbers you need to grow.</div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon">🤖</div>
+                    <div class="feat-title">Deepen AI</div>
+                    <div class="feat-desc">Smart insights that flag churn risks, highlight peak booking times, and
+                        suggest where to grow revenue.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="app">
+        <div class="container">
+            <div class="app-inner">
+                <div class="reveal" style="display:flex;justify-content:center">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-header-logo">YourStudio</div>
+                                <div class="phone-header-sub">powered by Deepen</div>
+                            </div>
+                            <div class="phone-body">
+                                <div class="phone-card">
+                                    <div class="phone-card-label">Your membership</div>
+                                    <div class="phone-card-val">Premium Monthly</div>
+                                    <div class="phone-card-sub">Renews 15 Jun 2026 · Active ✦</div>
+                                </div>
+                                <div
+                                    style="font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text3);padding:4px 0 2px">
+                                    Today's classes</div>
+                                <div class="phone-class">
+                                    <div>
+                                        <div class="phone-class-name">Morning Yoga</div>
+                                        <div class="phone-class-time">7:00 AM · 45 min · 3 spots</div>
+                                    </div>
+                                    <div class="phone-class-dot"></div>
+                                </div>
+                                <div class="phone-class">
+                                    <div>
+                                        <div class="phone-class-name">Pilates Core</div>
+                                        <div class="phone-class-time">9:30 AM · 60 min · Full</div>
+                                    </div>
+                                    <div class="phone-class-dot" style="background:rgba(0,0,0,0.1);box-shadow:none">
+                                    </div>
+                                </div>
+                                <div class="phone-class">
+                                    <div>
+                                        <div class="phone-class-name">Spin Class</div>
+                                        <div class="phone-class-time">6:00 PM · 45 min · 8 spots</div>
+                                    </div>
+                                    <div class="phone-class-dot"></div>
+                                </div>
+                                <div class="phone-btn">Book a class →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal" style="display:flex;flex-direction:column;gap:28px">
+                    <div>
+                        <div class="section-label">Branded mobile app</div>
+                        <h2 class="section-title" style="font-size:clamp(26px,3.5vw,40px)">Your studio in your clients'
+                            pockets.</h2>
+                        <p class="section-sub" style="font-size:15px;margin-top:14px">The DeepenWell app puts your brand
+                            front and centre — your name, your logo, your colours.</p>
+                    </div>
+                    <div class="app-feature">
+                        <div class="app-feature-icon">📲</div>
+                        <div>
+                            <div class="app-feature-title">Book classes in seconds</div>
+                            <div class="app-feature-desc">Members browse schedules, book sessions and manage
+                                cancellations without messaging you once.</div>
+                        </div>
+                    </div>
+                    <div class="app-feature">
+                        <div class="app-feature-icon">🔔</div>
+                        <div>
+                            <div class="app-feature-title">Push notifications that drive retention</div>
+                            <div class="app-feature-desc">Send schedule changes, promotions, and renewal reminders
+                                directly to members' phones.</div>
+                        </div>
+                    </div>
+                    <div class="app-feature">
+                        <div class="app-feature-icon">🎨</div>
+                        <div>
+                            <div class="app-feature-title">White label — your brand, not ours</div>
+                            <div class="app-feature-desc">Members see your studio, not Deepen. Available as an add-on
+                                from £50/month.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="onboarding">
+        <div class="container">
+            <div class="section-label">How it works</div>
+            <h2 class="section-title">Up and running in 12 days.</h2>
+            <p class="section-sub">Our team does the heavy lifting. No tech skills required.</p>
+            <div class="steps reveal">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-days">Days 1–3</div>
+                    <div class="step-title">Business analysis</div>
+                    <div class="step-desc">We learn how your studio works and configure Deepen to match your exact
+                        workflows.</div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-days">Days 2–5</div>
+                    <div class="step-title">Setup & training</div>
+                    <div class="step-desc">We build your system and train you and your team — usually a few hours, not
+                        days.</div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-days">Days 4–11</div>
+                    <div class="step-title">Test & refine</div>
+                    <div class="step-desc">We run test scenarios, tweak workflows, and make sure everything runs
+                        perfectly.</div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-days">Day 12</div>
+                    <div class="step-title">You're live</div>
+                    <div class="step-desc">Your studio is fully running on Deepen. Your account manager stays on hand
+                        for anything.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <div class="section-label">Pricing</div>
+            <h2 class="section-title">Simple, transparent pricing.</h2>
+            <p class="section-sub">No hidden fees. No long contracts. Cancel anytime.</p>
+            <div class="pricing-note">🎁 First month completely free for all new UK studios — no credit card required.
+            </div>
+            <div class="pricing-grid reveal">
+                <div class="price-card">
+                    <div class="price-plan">Start</div>
+                    <div class="price-amount"><sup>£</sup>29</div>
+                    <div class="price-period">per month · billed monthly</div>
+                    <div class="price-divider"></div>
+                    <ul class="price-features">
+                        <li class="price-feature"><span class="chk">✓</span>Client database management</li>
+                        <li class="price-feature"><span class="chk">✓</span>Class scheduling</li>
+                        <li class="price-feature"><span class="chk">✓</span>Membership registration</li>
+                        <li class="price-feature"><span class="chk">✓</span>Staff & payment tracking</li>
+                        <li class="price-feature"><span class="chk">✓</span>Analytics dashboard</li>
+                        <li class="price-feature"><span class="chk">✓</span>Check-in management</li>
+                        <li class="price-feature"><span class="dsh">–</span><span style="opacity:0.4">Mobile client
+                                app</span></li>
+                        <li class="price-feature"><span class="dsh">–</span><span style="opacity:0.4">Deepen AI</span>
+                        </li>
+                    </ul>
+                    <button class="price-cta outlined" onclick="scrollToDemo()">Book a Demo</button>
+                </div>
+                <div class="price-card featured">
+                    <div class="price-popular">Most popular</div>
+                    <div class="price-plan">Standard</div>
+                    <div class="price-amount"><sup>£</sup>49</div>
+                    <div class="price-period">per month · billed monthly</div>
+                    <div class="price-divider"></div>
+                    <ul class="price-features">
+                        <li class="price-feature"><span class="chk">✓</span>Everything in Start</li>
+                        <li class="price-feature"><span class="chk">✓</span>Mobile app for clients</li>
+                        <li class="price-feature"><span class="chk">✓</span>Trainer payout tracking</li>
+                        <li class="price-feature"><span class="chk">✓</span>Email & push messaging</li>
+                        <li class="price-feature"><span class="chk">✓</span>Dedicated account manager</li>
+                        <li class="price-feature"><span class="dsh">–</span><span style="opacity:0.4">Deepen AI</span>
+                        </li>
+                        <li class="price-feature"><span class="dsh">–</span><span style="opacity:0.4">Payroll
+                                calculation</span></li>
+                        <li class="price-feature"><span class="dsh">–</span><span style="opacity:0.4">Inventory
+                                management</span></li>
+                    </ul>
+                    <button class="price-cta filled" onclick="scrollToDemo()">Book a Demo — Free Month</button>
+                </div>
+                <div class="price-card">
+                    <div class="price-plan">Business+</div>
+                    <div class="price-amount"><sup>£</sup>69</div>
+                    <div class="price-period">per month · billed monthly</div>
+                    <div class="price-divider"></div>
+                    <ul class="price-features">
+                        <li class="price-feature"><span class="chk">✓</span>Everything in Standard</li>
+                        <li class="price-feature"><span class="chk">✓</span>Deepen AI insights</li>
+                        <li class="price-feature"><span class="chk">✓</span>Expense tracking</li>
+                        <li class="price-feature"><span class="chk">✓</span>Payroll calculation</li>
+                        <li class="price-feature"><span class="chk">✓</span>Inventory management</li>
+                        <li class="price-feature"><span class="chk">✓</span>Priority support</li>
+                        <li class="price-feature"><span class="chk">✓</span>Advanced analytics</li>
+                        <li class="price-feature"><span class="chk">✓</span>Multi-location ready</li>
+                    </ul>
+                    <button class="price-cta outlined" onclick="scrollToDemo()">Book a Demo</button>
+                </div>
+            </div>
+            <p style="font-size:12px;color:var(--text3);margin-top:18px;text-align:center">White label branded app from
+                £50/month. Access control integration available as add-on. Prices confirmed on demo call.</p>
+        </div>
+    </section>
+
+    <div class="quote-section">
+        <div class="container">
+            <div class="quote-inner reveal">
+                <span class="quote-mark">"</span>
+                <div class="big-quote">We were running our gym on WhatsApp and a Google Sheet. Deepen replaced
+                    everything in two weeks — and our members love the app.</div>
+                <div class="quote-attr">
+                    <div class="quote-avatar">🏋️</div>
+                    <div>Studio owner · Deepen partner</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="faq">
+        <div class="container">
+            <div class="section-label">Common questions</div>
+            <h2 class="section-title">Got questions?<br>We've got answers.</h2>
+            <div class="faq-grid reveal">
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">Do I need technical skills to use Deepen?<span
+                            class="faq-arrow">+</span></button>
+                    <div class="faq-a">Not at all. Our onboarding team sets everything up for you and trains your staff.
+                        Most studio owners are fully up and running within 12 days, with zero technical knowledge
+                        required.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">What's included in the free first month?<span
+                            class="faq-arrow">+</span></button>
+                    <div class="faq-a">Full access to your chosen plan, complete onboarding and setup, staff training,
+                        and your dedicated account manager — all at no cost. No credit card required. You only pay from
+                        month two.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">Can I use Deepen for a tennis or padel club?<span
+                            class="faq-arrow">+</span></button>
+                    <div class="faq-a">Yes. Deepen works for gyms, yoga studios, pilates, martial arts, dance, tennis,
+                        padel, swimming pools, and more. Court booking, slot management, and member passes work out of
+                        the box.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">How is Deepen different from Mindbody or
+                        TeamUp?<span class="faq-arrow">+</span></button>
+                    <div class="faq-a">Deepen includes a dedicated account manager — a real person who knows your studio
+                        — at a fraction of what Mindbody charges. No long-term contracts, no setup fees, and onboarding
+                        is handled by our team.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">Is there a contract or minimum commitment?<span
+                            class="faq-arrow">+</span></button>
+                    <div class="faq-a">No contracts and no minimum term. You can cancel at any time. We'd rather earn
+                        your loyalty every month than lock you in.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">How secure is my studio's data?<span
+                            class="faq-arrow">+</span></button>
+                    <div class="faq-a">Deepen uses industry-standard encryption and secure cloud infrastructure. Your
+                        data and your clients' data are fully protected and never sold or shared with third parties.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="demo">
+        <div class="cta-inner">
+            <div class="cta-left">
+                <h2>Book your <span class="grad">free</span> demo.</h2>
+                <p>See Deepen running live in 30 minutes. We'll show you exactly how it works for your studio type — no
+                    slides, no pitch. Just the product.</p>
+                <div class="cta-checks">
+                    <div class="cta-check">
+                        <div class="chk">✓</div>First month completely free
+                    </div>
+                    <div class="cta-check">
+                        <div class="chk">✓</div>Setup and onboarding included
+                    </div>
+                    <div class="cta-check">
+                        <div class="chk">✓</div>No contracts, cancel anytime
+                    </div>
+                    <div class="cta-check">
+                        <div class="chk">✓</div>A real person — not a chatbot
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="cta-form" id="demoForm">
+                    <div class="form-row">
+                        <input class="form-input" type="text" placeholder="First name">
+                        <input class="form-input" type="text" placeholder="Last name">
+                    </div>
+                    <input class="form-input" type="email" placeholder="Work email">
+                    <input class="form-input" type="text" placeholder="Studio name">
+                    <select class="form-select">
+                        <option value="" disabled selected>Type of studio</option>
+                        <option>Gym</option>
+                        <option>Yoga studio</option>
+                        <option>Pilates studio</option>
+                        <option>Tennis club</option>
+                        <option>Padel club</option>
+                        <option>Martial arts</option>
+                        <option>Dance studio</option>
+                        <option>Swimming pool</option>
+                        <option>Other</option>
+                    </select>
+                    <input class="form-input" type="tel" placeholder="Phone number (optional)">
+                    <button class="form-submit" onclick="handleSubmit(event)">Book My Free Demo ↗</button>
+                    <p class="form-fine">By submitting you agree to our <a href="#">Privacy Policy</a>. We'll never spam
+                        you.</p>
+                </div>
+                <div class="form-success" id="formSuccess">
+                    <div class="form-success-icon">✓</div>
+                    <h3>You're booked in.</h3>
+                    <p>We'll be in touch within one business day to confirm your demo time. Check your inbox.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div>
+                    <a href="#" class="footer-logo">deepen</a>
+                    <p class="footer-tagline">The all-in-one studio management platform for UK gyms, yoga studios, and
+                        sports clubs.</p>
+                </div>
+                <div>
+                    <div class="footer-col-title">Product</div>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#app">Mobile App</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#onboarding">How it works</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-title">Company</div>
+                    <ul class="footer-links">
+                        <li><a href="https://site.deepen.uz/en" target="_blank">About Deepen</a></li>
+                        <li><a href="https://site.deepen.uz/privacy-policy-en.pdf" target="_blank">Privacy Policy</a>
+                        </li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-title">Get in touch</div>
+                    <ul class="footer-links">
+                        <li><a href="#demo">Book a Demo</a></li>
+                        <li><a href="https://t.me/deepenuz" target="_blank">Telegram</a></li>
+                        <li><a href="https://www.instagram.com/deepen_uz/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/deepenerp/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2026 Deepen. All rights reserved. · Serving UK studios from day one.</div>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/deepen_uz/" target="_blank" class="social-link">ig</a>
+                    <a href="https://www.linkedin.com/company/deepenerp/" target="_blank" class="social-link">in</a>
+                    <a href="https://t.me/deepenuz" target="_blank" class="social-link">tg</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
