@@ -1390,32 +1390,87 @@ footer {
 
 /* RESPONSIVE */
 @media(max-width:900px) {
-    nav { padding: 14px 24px }
-    .nav-links { display: none }
-    .nav-mob { display: block }
+    nav { padding: 14px 20px }
+    
+    .nav-mob { 
+        display: block; 
+        position: relative;
+        z-index: 101; /* Above the menu overlay */
+    }
+
+    .nav-links { 
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s;
+    }
+
     .nav-links.open {
         display: flex;
+        opacity: 1;
+        visibility: visible;
         flex-direction: column;
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         align-items: center;
         justify-content: center;
         gap: 32px;
-        z-index: 99
+        z-index: 100;
+        padding: 40px;
     }
-    .nav-links.open a { font-size: 20px; color: var(--text) }
-    section { padding: 72px 24px }
-    .hero { padding: 120px 24px 72px }
-    .pain-grid { grid-template-columns: 1fr }
-    .features-grid { grid-template-columns: 1fr 1fr }
-    .app-inner { grid-template-columns: 1fr }
+
+    .nav-links.open li {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: slideUpIn 0.4s forwards;
+    }
+
+    .nav-links.open li:nth-child(1) { animation-delay: 0.1s }
+    .nav-links.open li:nth-child(2) { animation-delay: 0.15s }
+    .nav-links.open li:nth-child(3) { animation-delay: 0.2s }
+    .nav-links.open li:nth-child(4) { animation-delay: 0.25s }
+    .nav-links.open li:nth-child(5) { animation-delay: 0.3s }
+
+    @keyframes slideUpIn {
+        to { opacity: 1; transform: translateY(0) }
+    }
+
+    .nav-links.open a { 
+        font-size: 24px; 
+        color: var(--text);
+        font-weight: 600;
+    }
+
+    .nav-links.open .nav-cta {
+        padding: 16px 40px;
+        font-size: 18px !important;
+    }
+
+    section { padding: 60px 20px }
+    .hero { padding: 120px 20px 60px; text-align: center }
+    .hero-badge { margin: 0 auto 32px }
+    .hero h1 { max-width: 100% }
+    .hero-sub { margin: 0 auto 48px }
+    .hero-actions { justify-content: center }
+    
+    .pain-grid { grid-template-columns: 1fr; gap: 40px }
+    .features-grid { grid-template-columns: 1fr 1fr; gap: 12px }
+    .app-inner { grid-template-columns: 1fr; gap: 60px }
     .steps { grid-template-columns: 1fr 1fr; gap: 32px }
     .steps::before { display: none }
-    .pricing-grid { grid-template-columns: 1fr }
-    .faq-grid { grid-template-columns: 1fr }
-    .cta-inner { grid-template-columns: 1fr; gap: 48px; padding: 48px 32px }
-    .footer-top { grid-template-columns: 1fr 1fr }
+    .pricing-grid { grid-template-columns: 1fr; gap: 32px }
+    .faq-grid { grid-template-columns: 1fr; gap: 12px }
+    .cta-inner { 
+        grid-template-columns: 1fr; 
+        gap: 40px; 
+        padding: 40px 24px;
+        text-align: center;
+    }
+    .cta-checks { justify-content: center }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px }
 }
 
 @media(max-width:560px) {
@@ -1425,5 +1480,9 @@ footer {
     .footer-top { grid-template-columns: 1fr }
     .hero-actions { flex-direction: column; align-items: stretch }
     .hero-cards { flex-direction: column }
-    .hero h1 { font-size: 40px }
+    .hero h1 { font-size: 38px; line-height: 1.1 }
+    .hero-sub { font-size: 16px }
+    
+    .price-card.featured { transform: scale(1) }
+    .cta-inner { padding: 40px 16px }
 }

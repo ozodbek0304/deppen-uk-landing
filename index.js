@@ -1,5 +1,8 @@
 function toggleNav() { 
-    document.getElementById('navLinks').classList.toggle('open');
+    const navLinks = document.getElementById('navLinks');
+    const navMob = document.querySelector('.nav-mob');
+    navLinks.classList.toggle('open');
+    navMob.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
 }
 
 function scrollToDemo() { 
