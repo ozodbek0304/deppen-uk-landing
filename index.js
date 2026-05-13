@@ -1,8 +1,10 @@
-function toggleNav() { 
-    const navLinks = document.getElementById('navLinks');
-    const navMob = document.querySelector('.nav-mob');
-    navLinks.classList.toggle('open');
-    navMob.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+function toggleNav() {
+    const drawer = document.getElementById('mobDrawer');
+    const overlay = document.getElementById('navOverlay');
+    const navMob = document.getElementById('navMob');
+    const isOpen = drawer.classList.toggle('open');
+    overlay.classList.toggle('open', isOpen);
+    if (navMob) navMob.textContent = isOpen ? '✕' : '☰';
 }
 
 function scrollToDemo() { 
@@ -24,10 +26,13 @@ function handleSubmit(e) {
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
-    // Close mobile nav on link click
-    document.querySelectorAll('.nav-links a').forEach(l => {
+    // Close drawer on link click
+    document.querySelectorAll('.mob-drawer-links a, .mob-drawer-cta a').forEach(l => {
         l.addEventListener('click', () => {
-            document.getElementById('navLinks').classList.remove('open');
+            document.getElementById('mobDrawer').classList.remove('open');
+            document.getElementById('navOverlay').classList.remove('open');
+            const navMob = document.getElementById('navMob');
+            if (navMob) navMob.textContent = '☰';
         });
     });
 

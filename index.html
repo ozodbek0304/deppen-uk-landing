@@ -7,7 +7,7 @@
     <title>Deepen — Studio Management for UK Gyms &amp; Studios</title>
     <meta name="title" content="Deepen — Studio Management for UK Gyms &amp; Studios">
     <meta name="description"
-        content="Deepen is the all-in-one studio management platform for UK gyms, yoga studios, pilates, tennis and padel clubs. Automate bookings, payments, memberships and launch your own branded client app. First month completely free.">
+        content="A highly efficient yet user-friendly platform for managing fitness industry studios">
     <meta name="keywords"
         content="gym management software UK, studio management platform, fitness booking system, yoga studio management, pilates studio software, tennis club software, padel court booking, martial arts studio management, member management UK, gym booking app UK">
     <meta name="author" content="Deepen">
@@ -25,8 +25,8 @@
     <meta property="og:locale" content="en_GB">
     <meta property="og:title" content="Deepen — Studio Management for UK Gyms &amp; Studios">
     <meta property="og:description"
-        content="Bookings, payments, memberships and your branded client app — all in one intelligent platform. First month completely free for UK studios.">
-    <!-- <meta property="og:image" content="https://uk.deepen.uz/public/og-image.jpg"> -->
+        content="A highly efficient yet user-friendly platform for managing fitness industry studios">
+    <meta property="og:image" content="/public/seo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Deepen — All-in-one studio management for UK gyms and studios">
@@ -38,8 +38,8 @@
     <!-- <meta name="twitter:url" content="https://uk.deepen.uz"> -->
     <meta name="twitter:title" content="Deepen — Studio Management for UK Gyms &amp; Studios">
     <meta name="twitter:description"
-        content="Bookings, payments, memberships and your branded client app — all in one platform. First month free.">
-    <!-- <meta name="twitter:image" content="https://uk.deepen.uz/public/og-image.jpg"> -->
+        content="A highly efficient yet user-friendly platform for managing fitness industry studios">
+    <meta name="twitter:image" content="/public/seo.png">
     <meta name="twitter:image:alt" content="Deepen Studio Management Platform">
 
     <!-- ─── Favicon &amp; PWA ─── -->
@@ -73,8 +73,28 @@
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#demo" class="nav-cta">Book a Demo</a></li>
         </ul>
-        <button class="nav-mob" onclick="toggleNav()" aria-label="Menu">☰</button>
+        <button class="nav-mob" id="navMob" onclick="toggleNav()" aria-label="Menu">☰</button>
     </nav>
+
+    <!-- Mobile drawer — lives outside <nav> to avoid webkit backdrop-filter clipping -->
+    <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+    <div class="mob-drawer" id="mobDrawer">
+        <div class="mob-drawer-header">
+            <a href="#" class="nav-logo">
+                <img src="public/logo.svg" alt="Deepen Logo" height="35px">
+            </a>
+            <button class="mob-drawer-close" onclick="toggleNav()" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mob-drawer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#app">Mobile App</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <div class="mob-drawer-cta">
+            <a href="#demo" class="nav-cta">Book a Demo</a>
+        </div>
+    </div>
 
     <section class="hero" id="home">
         <div class="hero-orb-1"></div>
@@ -93,10 +113,7 @@
                 <div class="stat-num">180+</div>
                 <div class="stat-label">Studios globally</div>
             </div>
-            <div class="hero-stat-card">
-                <div class="stat-num">30+</div>
-                <div class="stat-label">International partners</div>
-            </div>
+
             <div class="hero-stat-card">
                 <div class="stat-num">12</div>
                 <div class="stat-label">Days to go live</div>
@@ -170,7 +187,7 @@
                             <div class="relief-check">✓</div>A real account manager — not a chatbot
                         </li>
                         <li class="relief-item">
-                            <div class="relief-check">✓</div>Up and running in under 2 weeks
+                            <div class="relief-check">✓</div>Up and running in under 1 weeks
                         </li>
                     </ul>
                     <a href="#demo" class="btn-primary" style="margin-top:32px;display:inline-flex">Book a Free Demo
@@ -231,43 +248,7 @@
                 <div class="reveal" style="display:flex;justify-content:center">
                     <div class="phone-frame">
                         <div class="phone-screen">
-                            <div class="phone-header">
-                                <div class="phone-header-logo">YourStudio</div>
-                                <div class="phone-header-sub">powered by Deepen</div>
-                            </div>
-                            <div class="phone-body">
-                                <div class="phone-card">
-                                    <div class="phone-card-label">Your membership</div>
-                                    <div class="phone-card-val">Premium Monthly</div>
-                                    <div class="phone-card-sub">Renews 15 Jun 2026 · Active ✦</div>
-                                </div>
-                                <div
-                                    style="font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text3);padding:4px 0 2px">
-                                    Today's classes</div>
-                                <div class="phone-class">
-                                    <div>
-                                        <div class="phone-class-name">Morning Yoga</div>
-                                        <div class="phone-class-time">7:00 AM · 45 min · 3 spots</div>
-                                    </div>
-                                    <div class="phone-class-dot"></div>
-                                </div>
-                                <div class="phone-class">
-                                    <div>
-                                        <div class="phone-class-name">Pilates Core</div>
-                                        <div class="phone-class-time">9:30 AM · 60 min · Full</div>
-                                    </div>
-                                    <div class="phone-class-dot" style="background:rgba(0,0,0,0.1);box-shadow:none">
-                                    </div>
-                                </div>
-                                <div class="phone-class">
-                                    <div>
-                                        <div class="phone-class-name">Spin Class</div>
-                                        <div class="phone-class-time">6:00 PM · 45 min · 8 spots</div>
-                                    </div>
-                                    <div class="phone-class-dot"></div>
-                                </div>
-                                <div class="phone-btn">Book a class →</div>
-                            </div>
+                            <img alt="mobile-app" src="public/mobile-app.png" width="100%" />
                         </div>
                     </div>
                 </div>
@@ -311,33 +292,33 @@
     <section id="onboarding">
         <div class="container">
             <div class="section-label">How it works</div>
-            <h2 class="section-title">Up and running in 12 days.</h2>
+            <h2 class="section-title">Up and running in 3 days.</h2>
             <p class="section-sub">Our team does the heavy lifting. No tech skills required.</p>
             <div class="steps reveal">
                 <div class="step">
                     <div class="step-num">1</div>
-                    <div class="step-days">Days 1–3</div>
+                    <div class="step-days">Day 1</div>
                     <div class="step-title">Business analysis</div>
                     <div class="step-desc">We learn how your studio works and configure Deepen to match your exact
                         workflows.</div>
                 </div>
                 <div class="step">
                     <div class="step-num">2</div>
-                    <div class="step-days">Days 2–5</div>
+                    <div class="step-days">Day 2</div>
                     <div class="step-title">Setup & training</div>
                     <div class="step-desc">We build your system and train you and your team — usually a few hours, not
                         days.</div>
                 </div>
                 <div class="step">
-                    <div class="step-num">3</div>
-                    <div class="step-days">Days 4–11</div>
+                    <div class="step-num">2</div>
+                    <div class="step-days">Day 2</div>
                     <div class="step-title">Test & refine</div>
                     <div class="step-desc">We run test scenarios, tweak workflows, and make sure everything runs
                         perfectly.</div>
                 </div>
                 <div class="step">
                     <div class="step-num">4</div>
-                    <div class="step-days">Day 12</div>
+                    <div class="step-days">Day 4</div>
                     <div class="step-title">You're live</div>
                     <div class="step-desc">Your studio is fully running on Deepen. Your account manager stays on hand
                         for anything.</div>
@@ -356,8 +337,12 @@
             <div class="pricing-grid reveal">
                 <div class="price-card">
                     <div class="price-plan">Start</div>
-                    <div class="price-amount"><sup>£</sup>29</div>
-                    <div class="price-period">per month · billed monthly</div>
+                    <div style="display: flex; align-items: center; width: 100%; justify-content: center; gap:12px">
+                        <div class="price-amount" style="text-decoration: line-through; color: rgb(46, 45, 45);"><sup>£</sup>49</div> 
+                        <div class="price-amount">/</div>
+                        <div class="price-amount"><sup>£</sup>29</div>
+                    </div>
+                    <div class="price-period">For the first 2 months</div>
                     <div class="price-divider"></div>
                     <ul class="price-features">
                         <li class="price-feature"><span class="chk">✓</span>Client database management</li>
@@ -376,8 +361,8 @@
                 <div class="price-card featured">
                     <div class="price-popular">Most popular</div>
                     <div class="price-plan">Standard</div>
-                    <div class="price-amount"><sup>£</sup>49</div>
-                    <div class="price-period">per month · billed monthly</div>
+                    <div class="price-amount"><sup>£</sup>69</div>
+                    <div class="price-period">Per month · billed monthly</div>
                     <div class="price-divider"></div>
                     <ul class="price-features">
                         <li class="price-feature"><span class="chk">✓</span>Everything in Start</li>
@@ -396,8 +381,8 @@
                 </div>
                 <div class="price-card">
                     <div class="price-plan">Business+</div>
-                    <div class="price-amount"><sup>£</sup>69</div>
-                    <div class="price-period">per month · billed monthly</div>
+                    <div class="price-amount"><sup>£</sup>99</div>
+                    <div class="price-period">Per month · billed monthly</div>
                     <div class="price-divider"></div>
                     <ul class="price-features">
                         <li class="price-feature"><span class="chk">✓</span>Everything in Standard</li>
@@ -484,12 +469,12 @@
     <section class="cta-section" id="demo">
         <div class="cta-inner">
             <div class="cta-left">
-                <h2>Book your <span class="grad">free</span> demo.</h2>
+                <h2>Book your demo</h2>
                 <p>See Deepen running live in 30 minutes. We'll show you exactly how it works for your studio type — no
                     slides, no pitch. Just the product.</p>
                 <div class="cta-checks">
                     <div class="cta-check">
-                        <div class="chk">✓</div>First month completely free
+                        <div class="chk">✓</div>First Month Free Trial
                     </div>
                     <div class="cta-check">
                         <div class="chk">✓</div>Setup and onboarding included
@@ -566,7 +551,7 @@
                     <div class="footer-col-title">Get in touch</div>
                     <ul class="footer-links">
                         <li><a href="#demo">Book a Demo</a></li>
-                        <li><a href="https://t.me/deepenuz" target="_blank">Telegram</a></li>
+                        <li><a href="https://t.me/deepenuz" target="_blank">WhatsApp</a></li>
                         <li><a href="https://www.instagram.com/deepen_uz/" target="_blank">Instagram</a></li>
                         <li><a href="https://www.linkedin.com/company/deepenerp/" target="_blank">LinkedIn</a></li>
                     </ul>
