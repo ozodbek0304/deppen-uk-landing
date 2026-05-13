@@ -797,6 +797,13 @@ section {
   font-size: 18px;
   flex-shrink: 0;
   border: 1px solid var(--border);
+  color: var(--p);
+}
+
+.app-feature-icon svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .app-feature-title {
@@ -1423,6 +1430,12 @@ footer {
   border-color: var(--p);
   color: var(--p);
   background: #fff;
+}
+
+.social-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 /* REVEAL ANIMATION */
