@@ -1161,7 +1161,7 @@ section {
 
 /* CTA SECTION */
 .cta-section {
-  padding: 100px 48px;
+  padding: 80px 24px;
   background: var(--bg);
 }
 
@@ -1218,7 +1218,7 @@ section {
 
 .cta-check {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 12px;
   font-size: 14px;
   font-weight: 500;
@@ -1227,6 +1227,8 @@ section {
 .cta-check .chk {
   width: 20px;
   height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   border-radius: 50%;
   background: var(--p);
   display: flex;
