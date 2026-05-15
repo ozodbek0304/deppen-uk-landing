@@ -777,25 +777,41 @@
             <div>
                 <div class="cta-form" id="demoForm">
                     <div class="form-row">
-                        <input class="form-input" type="text" placeholder="First name">
-                        <input class="form-input" type="text" placeholder="Last name">
+                        <div class="form-field">
+                            <input id="fieldFirstName" class="form-input" type="text" placeholder="First name">
+                            <span class="field-error" id="errFirstName"></span>
+                        </div>
+                        <div class="form-field">
+                            <input id="fieldLastName" class="form-input" type="text" placeholder="Last name">
+                            <span class="field-error" id="errLastName"></span>
+                        </div>
                     </div>
-                    <input class="form-input" type="email" placeholder="Work email">
-                    <input class="form-input" type="text" placeholder="Studio name">
-                    <select class="form-select">
-                        <option value="" disabled selected>Type of studio</option>
-                        <option>Gym</option>
-                        <option>Yoga studio</option>
-                        <option>Pilates studio</option>
-                        <option>Tennis club</option>
-                        <option>Padel club</option>
-                        <option>Martial arts</option>
-                        <option>Dance studio</option>
-                        <option>Swimming pool</option>
-                        <option>Other</option>
-                    </select>
-                    <input class="form-input" type="tel" placeholder="Phone number (optional)">
-                    <button class="form-submit" onclick="handleSubmit(event)">Book My Free Demo ↗</button>
+                    <div class="form-field">
+                        <input id="fieldEmail" class="form-input" type="email" placeholder="Work email">
+                        <span class="field-error" id="errEmail"></span>
+                    </div>
+                    <div class="form-field">
+                        <input id="fieldStudioName" class="form-input" type="text" placeholder="Studio name">
+                        <span class="field-error" id="errStudioName"></span>
+                    </div>
+                    <div class="form-field">
+                        <select id="fieldStudioType" class="form-select">
+                            <option value="" disabled selected>Type of studio</option>
+                            <option value="gym">Gym</option>
+                            <option value="yoga_studio">Yoga studio</option>
+                            <option value="pilates_studio">Pilates studio</option>
+                            <option value="tennis_club">Tennis club</option>
+                            <option value="padel_club">Padel club</option>
+                            <option value="martial_arts">Martial arts</option>
+                            <option value="dance_studio">Dance studio</option>
+                            <option value="swimming_pool">Swimming pool</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="field-error" id="errStudioType"></span>
+                    </div>
+                    <input id="fieldPhone" class="form-input" type="tel" placeholder="Phone number (optional)">
+                    <div id="formError" class="form-error" style="display:none"></div>
+                    <button id="formSubmitBtn" class="form-submit" onclick="handleSubmit(event)">Book My Free Demo ↗</button>
                     <p class="form-fine">By submitting you agree to our <a href="#">Privacy Policy</a>. We'll never spam
                         you.</p>
                 </div>
