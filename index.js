@@ -25,7 +25,7 @@ function switchAppTab(btn, panelId) {
     document.getElementById(panelId).classList.add('active');
 }
 
-const DEMO_API_URL = 'https://app.deepen.fit/api/book-demo/';
+const DEMO_API_URL = 'https://app.qa.deepen.uz/api/book-demo/';
 
 function setFieldError(id, msg) {
     const el = document.getElementById(id);
