@@ -18,11 +18,26 @@ function toggleFaq(btn) {
     if (!isOpen) item.classList.add('open');
 }
 
+function switchAppTab(btn, panelId) {
+    document.querySelectorAll('.app-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.app-tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+}
+
 function handleSubmit(e) {
     e.preventDefault();
     document.getElementById('demoForm').style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
 }
+
+function switchTab(btn,panelId){
+  document.querySelectorAll('.feat-tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.feat-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {

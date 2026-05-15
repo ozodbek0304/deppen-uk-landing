@@ -68,8 +68,12 @@ body::before {
 }
 
 /* Mobile-only elements — hidden on desktop */
-.mob-drawer  { display: none; }
-.nav-overlay { display: none; }
+.mob-drawer {
+  display: none;
+}
+.nav-overlay {
+  display: none;
+}
 
 /* NAV */
 nav {
@@ -177,8 +181,6 @@ nav {
   position: relative;
   z-index: 1;
 }
-
-
 
 @keyframes float1 {
   0%,
@@ -592,232 +594,301 @@ section {
 }
 
 /* FEATURES */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+.feat-tabs-wrap {
+  display: flex;
+  flex-direction: column;
   margin-top: 64px;
-}
-
-.feat-card {
-  padding: 32px 28px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--r2);
-  transition: all 0.35s;
-  cursor: default;
-  position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+
+}
+.feat-tab-list {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 8px;
+  gap: 4px;
+  overflow-x: auto;
+}
+.feat-tab-list::-webkit-scrollbar {
+  display: none;
+}
+.feat-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  border-radius: var(--r);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+  color: var(--text2);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  transition: all 0.22s;
+  position: relative;
+  flex-shrink: 0;
+}
+.feat-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+.feat-tab-btn.active {
+  background: rgba(102, 74, 234, 0.12);
+  color: var(--text);
+}
+.feat-tab-btn.active .feat-tab-icon {
+  background: var(--pg);
+  border-color: transparent;
+  box-shadow: 0 4px 14px var(--glow-p);
 }
 
-.feat-card:hover {
-  border-color: var(--p);
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(102, 74, 234, 0.08);
-}
-
-.feat-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 14px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
+.feat-tab-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
-  color: var(--p);
-}
-
-.feat-icon svg {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-}
-
-.feat-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
-}
-
-.feat-desc {
-  font-size: 13px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  transition: all 0.22s;
   color: var(--text2);
-  line-height: 1.65;
-  font-weight: 400;
-  position: relative;
-  z-index: 1;
+}
+.feat-tab-btn.active .feat-tab-icon {
+  color: #fff;
+}
+.feat-tab-label {
+  font-size: 13px;
+  font-weight: 500;
+}
+.feat-tab-panels {
+  padding: 48px 12px;
+  display: flex;
+  align-items: center;
+  min-height: 320px;
+}
+.feat-panel {
+  display: none;
+  animation: panelIn 0.35s ease;
+}
+.feat-panel.active {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+  width: 100%;
+}
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.feat-panel-content {
+  flex: 1;
+}
+.feat-panel-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin-bottom: 14px;
+  background: var(--pg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.feat-panel-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(22px, 2.5vw, 32px);
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+.feat-panel-desc {
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+.feat-panel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--pg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(102, 74, 234, 0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.feat-panel-link:hover {
+  border-color: var(--p);
+}
+.feat-panel-visual {
+  width: 340px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(102, 74, 234, 0.2);
+  box-shadow:
+    0 16px 48px var(--glow-p),
+    0 0 0 1px rgba(102, 74, 234, 0.1);
+}
+.feat-panel-visual{
+  width: 50%;
+}
+.feat-panel-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 700px) {
+  .feat-tab-panels {
+    padding: 32px 24px;
+  }
+  .feat-panel.active {
+    flex-direction: column;
+  }
+  .feat-panel-visual {
+    width: 100%;
+  }
 }
 
 /* APP SECTION */
-.app-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.phone-frame {
-  width: 260px;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 40px;
-  border: 8px solid #1a1a2e;
-  padding: 0;
-  box-shadow:
-    0 40px 80px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-}
-
-.phone-screen {
-  background: #f8f9ff;
-  border-radius: 32px;
-  height: 100%;
+.app-tab-switcher {
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  background: rgba(102, 74, 234, 0.08);
+  border-radius: 50px;
+  padding: 5px;
+  width: fit-content;
+  margin: 0 auto 52px;
 }
-
-.phone-header {
-  background: var(--p);
-  padding: 22px 16px 16px;
-}
-
-.phone-header-logo {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.phone-header-sub {
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 2px;
-}
-
-.phone-body {
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.phone-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-}
-
-.phone-card-label {
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text3);
-  margin-bottom: 4px;
-}
-
-.phone-card-val {
+.app-tab-btn {
+  padding: 10px 32px;
+  border-radius: 50px;
   font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.phone-card-sub {
-  font-size: 10px;
-  color: var(--text3);
-  margin-top: 2px;
-}
-
-.phone-class {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  padding: 9px 10px;
-}
-
-.phone-class-name {
-  font-size: 11px;
-  color: var(--text);
-  font-weight: 600;
-}
-
-.phone-class-time {
-  font-size: 9px;
+  font-weight: 500;
   color: var(--text2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.22s;
 }
-
-.phone-class-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--s);
-  box-shadow: 0 0 6px var(--s);
-}
-
-.phone-btn {
-  background: var(--pg);
+.app-tab-btn.active {
+  background: var(--p);
   color: #fff;
-  padding: 12px;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-  margin-top: 6px;
+  box-shadow: 0 4px 14px var(--glow-p);
 }
-
-.app-feature {
+.app-tab-panel {
+  display: none;
+}
+.app-tab-panel.active {
+  display: block;
+  animation: panelIn 0.3s ease;
+}
+.app-panel-body {
   display: flex;
-  gap: 16px;
-  align-items: flex-start;
+  gap: 64px;
+  align-items: center;
 }
-
-.app-feature-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: var(--bg2);
+.app-panel-left {
+  flex: 1;
+  min-width: 0;
+}
+.app-panel-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+.app-panel-desc {
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+.app-feat-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.app-feat-icon-box {
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  background: rgba(102, 74, 234, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
   flex-shrink: 0;
-  border: 1px solid var(--border);
   color: var(--p);
 }
-
-.app-feature-icon svg {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-}
-
-.app-feature-title {
-  font-size: 16px;
-  font-weight: 600;
+.app-feat-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
-
-.app-feature-desc {
+.app-feat-text {
   font-size: 14px;
   color: var(--text2);
-  line-height: 1.5;
-  font-weight: 400;
+  line-height: 1.65;
+}
+.app-panel-right {
+  flex-shrink: 0;
+  width: 350px;
+}
+.app-phone-bg {
+  border-radius: 32px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-phone-bg--purple {
+  background: rgba(102, 74, 234, 0.12);
+}
+.app-phone-bg--dark {
+ background: rgba(102, 74, 234, 0.12);
+}
+.app-phone-img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 28px;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .app-panel-body {
+    flex-direction: column-reverse;
+    gap: 36px;
+  }
+  .app-panel-right {
+    width: 100%;
+  }
+  .app-phone-bg {
+    padding: 32px 24px;
+  }
 }
 
 /* ONBOARDING/STEPS */
@@ -1458,7 +1529,6 @@ footer {
     padding: 14px 20px;
   }
 
-
   /* Hamburger button */
   .nav-mob {
     display: flex;
@@ -1585,7 +1655,9 @@ footer {
     padding: 16px 24px;
     display: block;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
+    transition:
+      background 0.2s,
+      color 0.2s;
   }
 
   .mob-drawer-links a:hover {
@@ -1626,7 +1698,6 @@ footer {
   .hero {
     padding: 120px 20px 60px;
     text-align: center;
-
   }
   .hero-badge {
     margin: 0 auto 32px;
@@ -1707,7 +1778,6 @@ footer {
     font-size: 38px;
     line-height: 1.1;
   }
-
 
   .hero-sub {
     font-size: 16px;
